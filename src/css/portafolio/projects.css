@@ -9,97 +9,133 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 4rem 3rem;
+    margin: 4rem 1.5rem;
+    width: 100%;
 }
+
+.proyectos__bloque {
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 3.5rem;
+}
+
+.proyectos__cabecera-bloque {
+    text-align: left;
+    margin-bottom: 1.8rem;
+    border-left: 3px solid var(--color-neon-azul);
+    padding-left: 1rem;
+}
+
+.proyectos__subtitulo {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--color-neon-azul);
+    margin-bottom: 0.4rem;
+}
+
+.proyectos__subtitulo-desc {
+    font-size: 0.9rem;
+    color: #a0a5b5;
+    text-align: left;
+}
+
 .proyectos__grid {
     display: grid;
     grid-template-columns: 1fr; /* 1 columna móvil */
-    gap: 3rem;
+    gap: 2rem;
     width: 100%;
     justify-items: center;
 }
+
 .proyectos__contenedor {
-    display: flex; /* Alineamos contenido en línea */
-    flex-direction: column; /* Por defecto en móvil, uno bajo otro */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     gap: 1rem;
-    padding: 1rem;
+    padding: 1.5rem 1.2rem;
     align-items: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.proyectos__contenedor:hover {
-    transform: translateY(-10px);
-    border: 1px solid var(--color-neon-azul);
-    box-shadow: 0 0 20px rgba(0, 210, 255, 0.2);
-}
-.proyectos__images {
-    width: 60%;
-    height: auto;
-    object-fit: contain;
-    border-radius: 25px;
+    width: 100%;
+    max-width: 22rem;
+    min-height: 20rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
-#affinityApp, #encriptador, #pongGame, #aluraflix {
-    width: 100%;
-    height: auto;
+.proyectos__contenedor:hover {
+    transform: translateY(-8px);
+    border-color: var(--color-neon-azul);
+    box-shadow: 0 10px 25px rgba(0, 210, 255, 0.2);
+}
+
+.proyectos__images {
+    width: 5rem;
+    height: 5rem;
     object-fit: contain;
+    border-radius: 12px;
+}
+
+#dragons, #encriptador, #pongGame, #aluraflix {
+    width: 100%;
+    /*max-width: 15rem;*/
+    height: auto;
+    object-fit: cover;
     border-radius: 8px;
 }
 
 .contenedor__detalles {
     display: flex;
     flex-direction: column;
-    gap: 1.7rem;
-
+    align-items: center;
+    gap: 0.6rem;
+    width: 100%;
+    text-align: center;
 }
 
+.proyectos__nombre {
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+/* Tech Tags / Badges */
+.tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.4rem;
+    margin-top: 0.2rem;
+}
+
+.tech-tag {
+    font-size: 0.72rem;
+    padding: 0.2rem 0.55rem;
+    border-radius: 12px;
+    background: rgba(0, 210, 255, 0.08);
+    border: 1px solid rgba(0, 210, 255, 0.25);
+    color: #a8eeff;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    display: inline-block;
+}
 
 @media (min-width: 768px) {
-
+    .proyectos {
+        margin: 4rem 2rem;
+    }
     .proyectos__grid {
-        max-width: 80%;
         grid-template-columns: repeat(2, 1fr);
-        gap: 3rem;
+        gap: 2rem;
     }
-    .proyectos__contenedor {
-        width: 100%;
-        height: 17rem;
-        max-width: 17rem; /* Evita que las cards se vuelvan gigantes horizontalmente */
+    .proyectos__subtitulo {
+        font-size: 1.45rem;
     }
-    .proyectos__images {
-        width: 60%;
-    }
-    #affinityApp, #encriptador, #pongGame,#aluraflix {
-        width: 80%;
-        height: auto;
-        object-fit: contain;
-        border-radius: 8px;
-    }
-    #affinityApp, #encriptador, #aluraflix{
-        margin-top: 1.5rem;
-    }
-
 }
 
-
-/* Escritorios y pantallas más grandes */
 @media (min-width: 1024px) {
-
-    .proyectos__contenedor {
-        max-width: 25rem;
-    }
     .proyectos__grid {
-        max-width: 1200px;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 2rem 
+        grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+        gap: 2.2rem;
     }
-    .proyectos__images {
-        width: 9rem;
-    }
-    #affinityApp, #encriptador, #pongGame, #aluraflix {
-        width: 14rem;
-    }
-    #affinityApp, #encriptador, #aluraflix{
-        margin-top: 2.5rem;
+    .proyectos__contenedor {
+        max-width: 100%;
     }
 }
 

@@ -74,8 +74,9 @@ a {
 }
 
 .textos{
-    font-size: 0.85rem;
-    text-align: justify;
+    font-size: 0.9rem;
+    text-align: left;
+    line-height: 1.6;
 }
 
 

@@ -87,3 +87,108 @@
         height: 13rem;
     }
 }
+
+/* Tarjeta destacada para Mascotas en Aficiones */
+.mascotas__card {
+    margin-top: 3rem;
+    width: 100%;
+    max-width: 48rem;
+    padding: 1.8rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    background: radial-gradient(circle at 10% 20%, rgba(191, 149, 63, 0.08) 0%, rgba(0, 210, 255, 0.03) 100%), rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(191, 149, 63, 0.25);
+    border-radius: 16px;
+    transition: all 0.3s ease;
+}
+
+.mascotas__card:hover {
+    border-color: #bf953f;
+    box-shadow: 0 8px 30px rgba(191, 149, 63, 0.2);
+    transform: translateY(-4px);
+}
+
+.mascotas__icon-contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 4.5rem;
+    height: 4.5rem;
+    border-radius: 50%;
+    background: rgba(191, 149, 63, 0.12);
+    border: 1px solid rgba(191, 149, 63, 0.35);
+    box-shadow: 0 4px 16px rgba(191, 149, 63, 0.2);
+    margin-bottom: 0.2rem;
+    transition: all 0.3s ease;
+}
+
+.mascotas__card:hover .mascotas__icon-contenedor {
+    transform: scale(1.08) rotate(5deg);
+    box-shadow: 0 6px 22px rgba(191, 149, 63, 0.35);
+}
+
+.mascotas__svg {
+    width: 2.6rem;
+    height: 2.6rem;
+    filter: drop-shadow(0 2px 6px rgba(191, 149, 63, 0.4));
+}
+
+.mascotas__badge {
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 0.25rem 0.8rem;
+    border-radius: 20px;
+    background: rgba(191, 149, 63, 0.15);
+    color: #fcf6ba;
+    border: 1px solid rgba(191, 149, 63, 0.4);
+    letter-spacing: 0.5px;
+    display: inline-block;
+}
+
+.mascotas__titulo {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.mascotas__desc {
+    max-width: 36rem;
+    color: #d1d5db;
+    font-size: 0.95rem;
+    text-align: center !important;
+}
+
+.mascotas__btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    background: linear-gradient(135deg, #bf953f 0%, #fcf6ba 40%, #b38728 70%, #bf953f 100%);
+    background-size: 250% 250%;
+    background-position: 0% 50%;
+    color: #0b0c10;
+    font-weight: 700;
+    padding: 0.7rem 1.5rem;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, background-position 0.6s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.mascotas__btn svg {
+    transition: transform 0.3s ease;
+}
+
+.mascotas__btn:hover {
+    transform: scale(1.05) translateY(-2px);
+    background-position: 100% 50%;
+    box-shadow: 0 6px 24px rgba(191, 149, 63, 0.55);
+    color: #000000;
+}
+
+.mascotas__btn:hover svg {
+    transform: translateX(4px);
+}
